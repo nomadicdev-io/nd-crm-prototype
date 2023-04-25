@@ -5,7 +5,7 @@ import {metaIcons} from '@/constants/metaIcons'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Welcome Back! | ND CRM Lite V0.1',
+  title: 'Login | ND CRM Lite V0.1',
   description: 'Prototype Project by nomadicdev.io',
   themeColor: '#ffffff',
   manifest: '/manifest.json',

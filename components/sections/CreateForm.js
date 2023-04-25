@@ -89,7 +89,7 @@ const CreateForm = () => {
 
   return (
     <div className="create_from_wrapper">
-        <div className="title_">Create Profile</div>
+        <div className="form_title">Create Profile</div>
 
         <form className="form_grid" onSubmit={submitForm}>
             <InputUI 

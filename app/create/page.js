@@ -5,7 +5,7 @@ import CenterWrapper from "@/components/common/CenterWrapper";
 import CreateForm from "@/components/sections/CreateForm";
 
 export default function Create() {
-    return (
+    return ( 
         
         <Main>
             <PageBG img={img}/>
