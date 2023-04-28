@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export const Button = ({children, title, type}) => {
@@ -15,4 +16,12 @@ export const ButtonGroup = ({children, fullCol})=> {
             {children}
         </div>
     )
+}
+
+export const IconButton = ({children, href})=> {
+  return (
+    <Link href={href} className='btn_icon'>
+      <i>{children}</i>
+    </Link>
+  )
 }
