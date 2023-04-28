@@ -40,7 +40,6 @@ const CreateForm = () => {
 
         axios.post( "https://api.cloudinary.com/v1_1/dcenyn23l/image/upload", imageData )
         .then((response) => { 
-            console.log(response); 
             setData({
                 ...data,
                 formData: {
@@ -51,7 +50,7 @@ const CreateForm = () => {
                 isFileUploaded: true
             })
         }) .catch((error) => { c
-            onsole.log(error);
+            console.log(error);
          });
 
     }
@@ -73,10 +72,23 @@ const CreateForm = () => {
 
         setData({
             ...data,
-            isSubmitted: true
+            loader: true
         })
 
-        console.log(data)
+        axios.post('http://localhost:8080/api/v1/company', data.formData, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then((response) => {
+            setData({
+                ...data,
+                loader: false,
+                isSubmitted: true
+            })
+            console.log(response)
+        })
+
+       
     }
 
     useEffect(()=> {
