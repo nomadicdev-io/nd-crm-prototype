@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import logo from '@/public/logo-icon.svg'
-import { Button, ButtonGroup, IconButton } from './Button'
+import { ButtonLink, ButtonGroup, IconButton } from './Button'
 import { FiSettings, FiLogOut } from 'react-icons/fi'
 import { BiAddToQueue } from 'react-icons/bi'
 
@@ -25,12 +25,12 @@ function Header() {
                         <FiLogOut />
                     </IconButton>
 
-                    <Button 
-                    title='Add Client'
-                    type='button'
+                    <ButtonLink 
+                        title='Add Client'
+                        href={'/clients'}
                     >
                         <BiAddToQueue />
-                    </Button>
+                    </ButtonLink>
                 </ButtonGroup>
 
             </div>

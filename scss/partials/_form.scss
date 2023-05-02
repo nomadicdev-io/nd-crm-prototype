@@ -56,6 +56,16 @@
         display: flex;
         font-size: 1.2rem;
     }
+
+    &.secondary_{
+        border-color: var(--third-color-1);
+        background-color: var(--third-color-1);
+
+        &:hover, &:focus{
+            border-color: var(--third-color-2);
+            background-color: var(--third-color-2);
+        }
+    }
 }
 
 .btn_icon{
@@ -74,6 +84,7 @@
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
+    border: none;
 
     &:hover, &:focus{
         background-color: var(--secondary-color);
@@ -85,6 +96,30 @@
         display: flex;
         font-size: 1.3rem;
     }
+
+    &.primary_{
+        background-color: var(--primary-color);
+        color: var(--bg-color);
+        border-color: var(--primary-color);
+
+        &:hover{
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+    }
+
+    &.sm_{
+        font-size: 0.75rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 0.35rem;
+
+        i{
+            font-size: 1rem;
+        }
+    
+    }
+
 }
 
 .input_{
@@ -193,6 +228,30 @@
          }
         }
     }
+
+    .select-ui{
+        &__control{
+            border: 1px solid #e6e6e6;
+            background-color: var(--bg-color);
+            height: 3rem;
+            border-radius: 0.5rem;
+            box-shadow: none;
+
+            &:hover{
+                border-color: #e6e6e6;
+            }
+        }
+
+        &__input-container{
+            padding: 0;
+            margin: 0;
+        }
+        
+        &__value-container{
+            padding: 0px 8px;
+            height: 3rem;
+        }
+    }
 }
 
 .loader_{
@@ -260,5 +319,20 @@
         color: var(--text-color);
         margin: 0;
         line-height: 2;
+    }
+}
+
+
+.search_form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    grid-gap: 10px;
+
+    .input_{
+        input[type=text], input[type=email], input[type=number], input[type=password], input[type=date], input[type=time]{
+            width: 17.5rem;
+        }
     }
 }

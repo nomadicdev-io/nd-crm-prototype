@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Button, ButtonGroup } from "../common/Button"
+import { ButtonLink, ButtonGroup } from "../common/Button"
 import { BiAddToQueue } from 'react-icons/bi'
 import { FiArrowUpRight } from "react-icons/fi"
 
@@ -11,12 +11,12 @@ const Banner = () => {
                 <h1>Hi, <span>User</span> Welcome Back</h1>
                 <p>Bringing companies and customers together, anywhere</p>
                 <ButtonGroup>
-                    <Button 
+                    <ButtonLink 
                     title='Add Client'
-                    type='button'
+                    href={'/clients'}
                     >
                         <BiAddToQueue />
-                    </Button>
+                    </ButtonLink>
                 </ButtonGroup>
             </div>
 
