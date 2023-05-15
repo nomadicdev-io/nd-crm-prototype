@@ -9,6 +9,7 @@ import SelectUI from "@/components/form/SelectUI"
 import axios from "axios"
 import { useEffect } from "react"
 import Loader from "@/components/common/Loader"
+import QuatationsList from "@/components/sections/QuatationsList"
 
 const clientData = atom({
   data: {
@@ -158,6 +159,8 @@ const CreateClient = () => {
           {data.loader && <Loader />}
 
         </div>
+
+        <QuatationsList />
 
         </div>
       </section>

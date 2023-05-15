@@ -19,7 +19,7 @@ const Clients = () => {
         axios.get('http://localhost:8080/api/v1/client')
         .then((res)=> 
             setData(res.data)
-        )
+        ).catch(err=> console.log(err))
     }
 
     useEffect(()=> {
